@@ -8,6 +8,7 @@ services:
       - ./package.json:/myapp/package.json:delegated
       - ./yarn.lock:/myapp/yarn.lock:delegated
       - ./webpack.config.js:/myapp/webpack.config.js
+      - ./.babelrc:/myapp/.babelrc
       - node_modules:/myapp/node_modules
 volumes:
   node_modules:
