@@ -1,0 +1,12 @@
+version: '3'
+services:
+  node:
+    image: node:8-slim
+    working_dir: /myapp
+    volumes:
+      - ./app:/myapp/app:delegated
+      - ./package.json:/myapp/package.json:delegated
+      - ./yarn.lock:/myapp/yarn.lock:delegated
+      - node_modules:/myapp/node_modules
+volumes:
+  node_modules:
