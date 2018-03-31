@@ -7,4 +7,7 @@ class App extends React.Component {
   }
 }
 
-ReactDom.render(<App/>, document.getElementById('app'));
+
+document.addEventListener('DOMContentLoaded', () => {
+  ReactDom.render(<App />, document.getElementById('app'));
+})
